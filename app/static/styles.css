@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #f4f5f7;
+  color: #1a1a1a;
+}
+
+body {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 960px;
+  line-height: 1.6;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  background: #1a73e8;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+button {
+  padding: 0.6rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 999px;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(26, 115, 232, 0.18);
+}
+
+.model-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.model-item {
+  border: 1px solid #e1e5ec;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: border-color 0.15s ease, box-shadow 0.2s ease;
+}
+
+.model-item:hover {
+  border-color: #1a73e8;
+  box-shadow: 0 8px 16px rgba(26, 115, 232, 0.12);
+}
+
+.model-label {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.model-label input[type='radio'] {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.3rem;
+}
+
+.model-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.model-description {
+  grid-column: 2;
+  margin: 0.35rem 0 0;
+  color: #555;
+}
+
+.muted {
+  color: #6c757d;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .panel {
+    padding: 1.25rem;
+  }
+}
