@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LM Studio - Sélecteur de modèle</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body data-server-url="{{ lm_studio_url }}">
+    <header>
+      <h1>LM Studio - Sélecteur de modèle</h1>
+      <p class="subtitle">
+        Cette interface permet de lister les modèles exposés par votre serveur LM Studio et d'activer celui de votre choix.
+      </p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Serveur LM Studio</h2>
+          <button id="refresh-button" type="button">Actualiser</button>
+        </div>
+        <p id="server-url"></p>
+      </section>
+
+      <section class="panel" id="models-panel">
+        <div class="panel-header">
+          <h2>Modèles disponibles</h2>
+          <span id="model-count" class="badge">0</span>
+        </div>
+        <p id="empty-state" class="muted">Aucun modèle n'a été trouvé pour le moment.</p>
+        <ul id="model-list" class="model-list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Sélection</h2>
+        <p id="selection-status" class="muted">Choisissez un modèle puis cliquez sur "Activer".</p>
+        <button id="select-button" type="button" disabled>Activer le modèle</button>
+      </section>
+    </main>
+
+    <footer>
+      <p class="muted">
+        Vous pouvez modifier l'URL du serveur LM Studio en définissant la variable d'environnement <code>LM_STUDIO_URL</code> avant de lancer l'application.
+      </p>
+    </footer>
+
+    <script src="/static/app.js" defer></script>
+  </body>
+</html>
